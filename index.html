@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#013878">
     <title>UNI PLUS | سفر وسياحة ودراسة</title>
-    <meta name="description" content="UNI PLUS - شركة سفر وسياحة ودراسة. تذاكر طيران، تسهيل إجراءات السفر والدراسة. المقر الرئيسي بنغازي، فروع في إسطنبول وكوالالمبور وبالي.">
+    <meta name="description" content="UNI PLUS - شركة سفر وسياحة ودراسة. تذاكر طيران، تسهيل إجراءات السفر والدراسة.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -62,37 +62,20 @@
         ul { list-style: none; }
         button { font-family: inherit; cursor: pointer; border: none; background: none; transition: var(--transition); }
 
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 16px;
-        }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 16px; }
 
-        /* ===== Icons ===== */
         .icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 22px;
-            height: 22px;
-            flex-shrink: 0;
-            stroke: currentColor;
-            stroke-width: 2;
-            fill: none;
-            stroke-linecap: round;
-            stroke-linejoin: round;
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 22px; height: 22px; flex-shrink: 0;
+            stroke: currentColor; stroke-width: 2; fill: none;
+            stroke-linecap: round; stroke-linejoin: round;
         }
         .icon-sm { width: 16px; height: 16px; }
         .icon-lg { width: 30px; height: 30px; }
 
-        /* ===== Header ===== */
+        /* Header */
         .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
             height: var(--header-h);
             background: rgba(255, 255, 255, 0.96);
             -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -100,514 +83,181 @@
             border-bottom: 1px solid rgba(1, 56, 120, 0.08);
             transition: var(--transition);
         }
-
-        .header.scrolled {
-            height: 60px;
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 4px 20px rgba(1, 56, 120, 0.1);
-        }
-
-        .header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            height: 100%;
-            gap: 12px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            white-space: nowrap;
-            flex-shrink: 0;
-            min-width: 0;
-        }
-
-        .logo-img {
-            height: 46px;
-            width: auto;
-            object-fit: contain;
-            border-radius: 8px;
-        }
-
+        .header.scrolled { height: 60px; background: rgba(255, 255, 255, 0.98); box-shadow: 0 4px 20px rgba(1, 56, 120, 0.1); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; width: 100%; height: 100%; gap: 12px; }
+        .logo { display: flex; align-items: center; gap: 10px; white-space: nowrap; flex-shrink: 0; min-width: 0; }
+        .logo-img { height: 46px; width: auto; object-fit: contain; border-radius: 8px; }
         .logo-mark {
-            width: 42px;
-            height: 42px;
+            width: 42px; height: 42px;
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold);
-            font-size: 1.2rem;
-            font-weight: 900;
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            color: var(--gold); font-size: 1.2rem; font-weight: 900;
             box-shadow: 0 4px 14px rgba(1, 56, 120, 0.25);
-            position: relative;
-            flex-shrink: 0;
+            position: relative; flex-shrink: 0;
         }
-
         .logo-mark::after {
-            content: '+';
-            position: absolute;
-            top: -3px;
-            right: -3px;
-            width: 15px;
-            height: 15px;
-            background: var(--gold);
-            color: var(--primary);
-            border-radius: 50%;
-            font-size: 0.7rem;
-            font-weight: 900;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            line-height: 1;
+            content: '+'; position: absolute; top: -3px; right: -3px;
+            width: 15px; height: 15px; background: var(--gold); color: var(--primary);
+            border-radius: 50%; font-size: 0.7rem; font-weight: 900;
+            display: flex; align-items: center; justify-content: center; line-height: 1;
         }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.1;
-            min-width: 0;
-        }
-
-        .logo-text .main {
-            font-size: 1.15rem;
-            font-weight: 900;
-            color: var(--primary);
-            letter-spacing: -0.3px;
-        }
-
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; min-width: 0; }
+        .logo-text .main { font-size: 1.15rem; font-weight: 900; color: var(--primary); letter-spacing: -0.3px; }
         .logo-text .main .plus { color: var(--gold); }
-        .logo-text .sub {
-            font-size: 0.58rem;
-            font-weight: 600;
-            color: var(--text-soft);
-            letter-spacing: 0.5px;
-        }
+        .logo-text .sub { font-size: 0.58rem; font-weight: 600; color: var(--text-soft); letter-spacing: 0.5px; }
 
         .nav { display: none; }
         .nav ul { display: flex; gap: 2px; }
-
-        .nav a {
-            padding: 8px 14px;
-            font-size: 0.88rem;
-            font-weight: 600;
-            color: var(--text);
-            border-radius: 8px;
-            transition: var(--transition);
-        }
-
+        .nav a { padding: 8px 14px; font-size: 0.88rem; font-weight: 600; color: var(--text); border-radius: 8px; transition: var(--transition); }
         .nav a:hover { background: rgba(1, 56, 120, 0.08); }
+        .nav a.active { background: var(--primary); color: var(--secondary); box-shadow: 0 4px 12px rgba(1, 56, 120, 0.25); }
 
-        .nav a.active {
-            background: var(--primary);
-            color: var(--secondary);
-            box-shadow: 0 4px 12px rgba(1, 56, 120, 0.25);
-        }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-shrink: 0;
-        }
+        .header-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 
         .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            padding: 11px 24px;
-            font-family: var(--font);
-            font-size: 0.92rem;
-            font-weight: 700;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: var(--transition);
-            border: 2px solid transparent;
-            text-align: center;
-            white-space: nowrap;
+            display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+            padding: 11px 24px; font-family: var(--font); font-size: 0.92rem; font-weight: 700;
+            border-radius: 50px; cursor: pointer; transition: var(--transition);
+            border: 2px solid transparent; text-align: center; white-space: nowrap;
         }
-
         .btn-sm { padding: 8px 18px; font-size: 0.82rem; }
-
-        .btn-gold {
-            background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--primary);
-            box-shadow: var(--shadow-gold);
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 36px rgba(201, 162, 39, 0.5);
-        }
-
+        .btn-gold { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--primary); box-shadow: var(--shadow-gold); }
+        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(201, 162, 39, 0.5); }
         .btn-outline {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--secondary);
+            background: rgba(255, 255, 255, 0.1); color: var(--secondary);
             border-color: var(--secondary);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
         }
-
-        .btn-outline:hover {
-            background: var(--secondary);
-            color: var(--primary);
-            transform: translateY(-2px);
-        }
+        .btn-outline:hover { background: var(--secondary); color: var(--primary); transform: translateY(-2px); }
 
         .hamburger {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            width: 40px;
-            height: 40px;
-            align-items: center;
-            justify-content: center;
-            background: rgba(1, 56, 120, 0.06);
-            border-radius: 10px;
-            transition: var(--transition);
-            flex-shrink: 0;
+            display: flex; flex-direction: column; gap: 4px;
+            width: 40px; height: 40px;
+            align-items: center; justify-content: center;
+            background: rgba(1, 56, 120, 0.06); border-radius: 10px;
+            transition: var(--transition); flex-shrink: 0;
         }
-
-        .hamburger span {
-            width: 20px;
-            height: 2px;
-            background: var(--primary);
-            border-radius: 2px;
-            transition: var(--transition);
-        }
-
+        .hamburger span { width: 20px; height: 2px; background: var(--primary); border-radius: 2px; transition: var(--transition); }
         .hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
         .hamburger.active span:nth-child(2) { opacity: 0; }
         .hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
-        /* ===== Mobile Menu ===== */
+        /* Mobile Menu */
         .mobile-menu {
-            position: fixed;
-            top: var(--header-h);
-            left: 0;
-            right: 0;
+            position: fixed; top: var(--header-h); left: 0; right: 0;
             background: rgba(255, 255, 255, 0.98);
-            -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
             box-shadow: 0 8px 32px rgba(1, 56, 120, 0.15);
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease;
-            z-index: 999;
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.4s ease; z-index: 999;
             border-bottom: 1px solid rgba(1, 56, 120, 0.08);
         }
-
         .mobile-menu.active { max-height: 600px; overflow-y: auto; }
-
         .mobile-menu a {
-            display: flex;
-            align-items: center;
-            padding: 14px 20px;
-            font-weight: 600;
-            color: var(--text);
-            border-bottom: 1px solid rgba(1, 56, 120, 0.06);
-            font-size: 0.95rem;
+            display: flex; align-items: center; padding: 14px 20px;
+            font-weight: 600; color: var(--text);
+            border-bottom: 1px solid rgba(1, 56, 120, 0.06); font-size: 0.95rem;
         }
+        .mobile-menu a:hover, .mobile-menu a:active { background: rgba(1, 56, 120, 0.06); color: var(--primary); }
 
-        .mobile-menu a:hover,
-        .mobile-menu a:active { background: rgba(1, 56, 120, 0.06); color: var(--primary); }
-
-        /* ===== Hero ===== */
+        /* Hero */
         .hero {
-            position: relative;
-            min-height: 100vh;
-            min-height: 100svh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: calc(var(--header-h) + 40px) 0 60px;
-            overflow: hidden;
+            position: relative; min-height: 100vh; min-height: 100svh;
+            display: flex; align-items: center; justify-content: center;
+            padding: calc(var(--header-h) + 40px) 0 60px; overflow: hidden;
         }
-
         .hero-bg {
-            position: absolute;
-            inset: 0;
+            position: absolute; inset: 0;
             background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: 0;
-            animation: slowZoom 25s ease-in-out infinite alternate;
+            background-size: cover; background-position: center; background-repeat: no-repeat;
+            z-index: 0; animation: slowZoom 25s ease-in-out infinite alternate;
         }
-
-        @keyframes slowZoom {
-            from { transform: scale(1); }
-            to { transform: scale(1.12); }
-        }
-
+        @keyframes slowZoom { from { transform: scale(1); } to { transform: scale(1.12); } }
         .hero-overlay {
-            position: absolute;
-            inset: 0;
+            position: absolute; inset: 0;
             background: linear-gradient(135deg, rgba(1, 56, 120, 0.92) 0%, rgba(1, 56, 120, 0.6) 45%, rgba(1, 56, 120, 0.9) 100%);
             z-index: 1;
         }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 880px;
-            color: var(--secondary);
-            padding: 0 8px;
-        }
-
+        .hero-content { position: relative; z-index: 2; text-align: center; max-width: 880px; color: var(--secondary); padding: 0 8px; }
         .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            display: inline-flex; align-items: center; gap: 8px;
             padding: 8px 18px;
             background: rgba(255, 255, 255, 0.12);
             border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            margin-bottom: 20px;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+            border-radius: 50px; font-size: 0.78rem; font-weight: 600;
+            letter-spacing: 0.5px; margin-bottom: 20px;
+            -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
         }
-
-        .hero-badge .dot {
-            width: 7px;
-            height: 7px;
-            background: var(--gold);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-            flex-shrink: 0;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(1.3); }
-        }
-
-        .hero h1 {
-            font-size: 2rem;
-            font-weight: 900;
-            line-height: 1.3;
-            margin-bottom: 16px;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .hero h1 .highlight {
-            color: var(--gold);
-            position: relative;
-            display: inline-block;
-        }
-
+        .hero-badge .dot { width: 7px; height: 7px; background: var(--gold); border-radius: 50%; animation: pulse 2s infinite; flex-shrink: 0; }
+        @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
+        .hero h1 { font-size: 2rem; font-weight: 900; line-height: 1.3; margin-bottom: 16px; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
+        .hero h1 .highlight { color: var(--gold); position: relative; display: inline-block; }
         .hero h1 .highlight::after {
-            content: '';
-            position: absolute;
-            bottom: 2px;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: rgba(201, 162, 39, 0.35);
-            border-radius: 2px;
-            z-index: -1;
+            content: ''; position: absolute; bottom: 2px; left: 0; right: 0;
+            height: 4px; background: rgba(201, 162, 39, 0.35); border-radius: 2px; z-index: -1;
         }
-
-        .hero p {
-            font-size: 0.95rem;
-            opacity: 0.92;
-            margin-bottom: 28px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.9;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-        }
-
+        .hero p { font-size: 0.95rem; opacity: 0.92; margin-bottom: 28px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.9; }
+        .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
         .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            margin-top: 44px;
-            padding-top: 30px;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+            margin-top: 44px; padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
+        .hero-stat h3 { font-size: 1.5rem; font-weight: 900; margin-bottom: 2px; color: var(--gold-light); }
+        .hero-stat p { font-size: 0.75rem; opacity: 0.85; margin: 0; line-height: 1.4; }
 
-        .hero-stat h3 {
-            font-size: 1.5rem;
-            font-weight: 900;
-            margin-bottom: 2px;
-            color: var(--gold-light);
-        }
-
-        .hero-stat p {
-            font-size: 0.75rem;
-            opacity: 0.85;
-            margin: 0;
-            line-height: 1.4;
-        }
-
-        /* ===== Sections ===== */
+        /* Sections */
         .section { padding: 60px 0; }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 36px;
-        }
-
+        .section-header { text-align: center; margin-bottom: 36px; }
         .section-label {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            color: var(--gold-dark);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            padding: 6px 16px;
-            background: rgba(201, 162, 39, 0.12);
-            border-radius: 50px;
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 0.72rem; font-weight: 700; color: var(--gold-dark);
+            text-transform: uppercase; letter-spacing: 2px;
+            margin-bottom: 10px; padding: 6px 16px;
+            background: rgba(201, 162, 39, 0.12); border-radius: 50px;
         }
+        .section-title { font-size: 1.55rem; font-weight: 900; color: var(--text); line-height: 1.35; }
+        .section-subtitle { font-size: 0.92rem; color: var(--text-muted); max-width: 650px; margin: 10px auto 0; }
 
-        .section-title {
-            font-size: 1.55rem;
-            font-weight: 900;
-            color: var(--text);
-            line-height: 1.35;
-        }
-
-        .section-subtitle {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            max-width: 650px;
-            margin: 10px auto 0;
-        }
-
-        /* ===== About ===== */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-            align-items: center;
-        }
-
+        /* About */
+        .about-grid { display: grid; grid-template-columns: 1fr; gap: 30px; align-items: center; }
         .about-visual {
-            position: relative;
-            border-radius: var(--radius);
-            overflow: hidden;
+            position: relative; border-radius: var(--radius); overflow: hidden;
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            padding: 28px 22px;
-            min-height: 280px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 16px;
-            box-shadow: var(--glass-shadow);
+            padding: 28px 22px; min-height: 280px;
+            display: flex; flex-direction: column; justify-content: center;
+            gap: 16px; box-shadow: var(--glass-shadow);
         }
-
         .about-visual::before {
-            content: '';
-            position: absolute;
-            inset: 0;
+            content: ''; position: absolute; inset: 0;
             background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=2035&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.2;
+            background-size: cover; background-position: center; opacity: 0.2;
         }
-
-        .about-visual-content {
-            position: relative;
-            z-index: 2;
-            color: var(--secondary);
-        }
-
+        .about-visual-content { position: relative; z-index: 2; color: var(--secondary); }
         .about-visual-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            display: inline-flex; align-items: center; gap: 6px;
             padding: 6px 14px;
             background: rgba(255, 255, 255, 0.15);
             border: 1px solid rgba(255, 255, 255, 0.25);
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
+            border-radius: 50px; font-size: 0.75rem; font-weight: 600;
             margin-bottom: 14px;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
         }
-
-        .about-visual h3 {
-            font-size: 1.3rem;
-            font-weight: 900;
-            margin-bottom: 10px;
-            line-height: 1.3;
-        }
-
+        .about-visual h3 { font-size: 1.3rem; font-weight: 900; margin-bottom: 10px; line-height: 1.3; }
         .about-visual h3 .gold { color: var(--gold-light); }
-
-        .about-visual p {
-            font-size: 0.88rem;
-            opacity: 0.92;
-            line-height: 1.8;
-        }
-
-        .about-visual-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin-top: 18px;
-            position: relative;
-            z-index: 2;
-        }
-
+        .about-visual p { font-size: 0.88rem; opacity: 0.92; line-height: 1.8; }
+        .about-visual-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 18px; position: relative; z-index: 2; }
         .about-visual-stat {
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: var(--radius-sm);
-            padding: 12px 14px;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+            border-radius: var(--radius-sm); padding: 12px 14px;
+            -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
             color: var(--secondary);
         }
-
-        .about-visual-stat h4 {
-            font-size: 1.2rem;
-            font-weight: 900;
-            color: var(--gold-light);
-            margin-bottom: 2px;
-        }
-
-        .about-visual-stat p {
-            font-size: 0.72rem;
-            opacity: 0.85;
-            margin: 0;
-        }
-
-        .about-content h2 {
-            font-size: 1.4rem;
-            font-weight: 900;
-            margin-bottom: 14px;
-            line-height: 1.3;
-        }
-
-        .about-content > p {
-            color: var(--text-muted);
-            margin-bottom: 14px;
-            font-size: 0.92rem;
-            line-height: 1.9;
-        }
-
+        .about-visual-stat h4 { font-size: 1.2rem; font-weight: 900; color: var(--gold-light); margin-bottom: 2px; }
+        .about-visual-stat p { font-size: 0.72rem; opacity: 0.85; margin: 0; }
+        .about-content h2 { font-size: 1.4rem; font-weight: 900; margin-bottom: 14px; line-height: 1.3; }
+        .about-content > p { color: var(--text-muted); margin-bottom: 14px; font-size: 0.92rem; line-height: 1.9; }
         .vision-card {
             background: var(--glass-bg);
             -webkit-backdrop-filter: blur(16px) saturate(160%);
@@ -615,772 +265,317 @@
             border: 1px solid var(--glass-border);
             border-right: 4px solid var(--gold);
             border-radius: var(--radius-sm);
-            padding: 18px 20px;
-            margin-top: 16px;
+            padding: 18px 20px; margin-top: 16px;
             box-shadow: var(--glass-shadow);
         }
+        .vision-card h4 { font-size: 0.92rem; font-weight: 800; margin-bottom: 6px; color: var(--primary); display: flex; align-items: center; gap: 6px; }
+        .vision-card p { font-size: 0.86rem; color: var(--text-muted); margin: 0; line-height: 1.8; }
 
-        .vision-card h4 {
-            font-size: 0.92rem;
-            font-weight: 800;
-            margin-bottom: 6px;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .vision-card p {
-            font-size: 0.86rem;
-            color: var(--text-muted);
-            margin: 0;
-            line-height: 1.8;
-        }
-
-        /* ===== Services ===== */
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 18px;
-        }
-
+        /* Services */
+        .services-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
         .service-card {
             background: var(--glass-bg-strong);
             -webkit-backdrop-filter: blur(18px) saturate(180%);
             backdrop-filter: blur(18px) saturate(180%);
             border: 1px solid var(--glass-border);
-            border-radius: var(--radius);
-            padding: 26px 22px;
-            transition: var(--transition);
-            box-shadow: var(--glass-shadow);
-            position: relative;
-            overflow: hidden;
+            border-radius: var(--radius); padding: 26px 22px;
+            transition: var(--transition); box-shadow: var(--glass-shadow);
+            position: relative; overflow: hidden;
         }
-
         .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            height: 4px;
+            content: ''; position: absolute; top: 0; right: 0; left: 0; height: 4px;
             background: linear-gradient(90deg, var(--gold), var(--gold-light));
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: var(--transition);
+            transform: scaleX(0); transform-origin: right; transition: var(--transition);
         }
-
-        .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--gold);
-        }
-
+        .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--gold); }
         .service-card:hover::before { transform: scaleX(1); }
-
         .service-icon {
-            width: 52px;
-            height: 52px;
+            width: 52px; height: 52px;
             background: linear-gradient(135deg, rgba(201, 162, 39, 0.18), rgba(201, 162, 39, 0.05));
             border: 1px solid rgba(201, 162, 39, 0.25);
             border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-            color: var(--gold-dark);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 16px; color: var(--gold-dark);
         }
+        .service-card h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; color: var(--text); }
+        .service-card > p { font-size: 0.86rem; color: var(--text-muted); line-height: 1.8; }
 
-        .service-card h3 {
-            font-size: 1.05rem;
-            font-weight: 800;
-            margin-bottom: 8px;
-            color: var(--text);
-        }
-
-        .service-card > p {
-            font-size: 0.86rem;
-            color: var(--text-muted);
-            line-height: 1.8;
-        }
-
-        /* ===== Packages Section (NEW) ===== */
-        .packages-section {
-            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-            position: relative;
-        }
-
-        .packages-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-
+        /* Packages */
+        .packages-section { background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); position: relative; }
+        .packages-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
         .package-card {
             background: var(--glass-bg-strong);
             -webkit-backdrop-filter: blur(18px) saturate(180%);
             backdrop-filter: blur(18px) saturate(180%);
             border: 1px solid var(--glass-border);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--glass-shadow);
-            transition: var(--transition);
-            position: relative;
-            display: flex;
-            flex-direction: column;
+            border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--glass-shadow); transition: var(--transition);
+            position: relative; display: flex; flex-direction: column;
         }
-
         .package-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            height: 4px;
+            content: ''; position: absolute; top: 0; right: 0; left: 0; height: 4px;
             background: linear-gradient(90deg, var(--gold), var(--gold-light));
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: var(--transition);
-            z-index: 3;
+            transform: scaleX(0); transform-origin: right; transition: var(--transition); z-index: 3;
         }
-
-        .package-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--gold);
-        }
-
+        .package-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); border-color: var(--gold); }
         .package-card:hover::before { transform: scaleX(1); }
-
-        .package-image {
-            position: relative;
-            height: 200px;
-            overflow: hidden;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-        }
-
-        .package-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .package-card:hover .package-image img {
-            transform: scale(1.08);
-        }
-
+        .package-image { position: relative; height: 200px; overflow: hidden; background: linear-gradient(135deg, var(--primary), var(--primary-light)); }
+        .package-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .package-card:hover .package-image img { transform: scale(1.08); }
         .package-image-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 100%; height: 100%;
+            display: flex; align-items: center; justify-content: center;
             color: rgba(255, 255, 255, 0.5);
         }
-
         .package-badge {
-            position: absolute;
-            top: 12px;
-            right: 12px;
+            position: absolute; top: 12px; right: 12px;
             background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--primary);
-            padding: 5px 14px;
-            border-radius: 50px;
-            font-size: 0.72rem;
-            font-weight: 800;
-            box-shadow: var(--shadow-gold);
-            z-index: 2;
+            color: var(--primary); padding: 5px 14px;
+            border-radius: 50px; font-size: 0.72rem; font-weight: 800;
+            box-shadow: var(--shadow-gold); z-index: 2;
         }
-
         .package-duration {
-            position: absolute;
-            bottom: 12px;
-            left: 12px;
+            position: absolute; bottom: 12px; left: 12px;
             background: rgba(0, 0, 0, 0.65);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 50px;
-            font-size: 0.72rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            z-index: 2;
+            -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+            color: white; padding: 4px 12px; border-radius: 50px;
+            font-size: 0.72rem; font-weight: 600;
+            display: flex; align-items: center; gap: 5px; z-index: 2;
         }
-
-        .package-body {
-            padding: 20px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
+        .package-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
         .package-destination {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--gold-dark);
+            display: inline-flex; align-items: center; gap: 5px;
+            font-size: 0.75rem; font-weight: 700; color: var(--gold-dark);
             margin-bottom: 8px;
         }
-
-        .package-title {
-            font-size: 1.1rem;
-            font-weight: 800;
-            color: var(--text);
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-
+        .package-title { font-size: 1.1rem; font-weight: 800; color: var(--text); margin-bottom: 8px; line-height: 1.4; }
         .package-description {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: 14px;
-            flex: 1;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
+            font-size: 0.85rem; color: var(--text-muted); line-height: 1.7;
+            margin-bottom: 14px; flex: 1;
+            display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
         }
-
-        .package-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 16px;
-        }
-
+        .package-features { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
         .package-feature {
-            font-size: 0.72rem;
-            font-weight: 600;
-            padding: 4px 10px;
-            background: rgba(1, 56, 120, 0.06);
-            color: var(--primary);
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            gap: 4px;
+            font-size: 0.72rem; font-weight: 600; padding: 4px 10px;
+            background: rgba(1, 56, 120, 0.06); color: var(--primary);
+            border-radius: 50px; display: flex; align-items: center; gap: 4px;
         }
-
         .package-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-            padding-top: 14px;
-            border-top: 1px solid rgba(1, 56, 120, 0.08);
-            margin-top: auto;
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 10px; padding-top: 14px;
+            border-top: 1px solid rgba(1, 56, 120, 0.08); margin-top: auto;
         }
-
-        .package-price {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.2;
-        }
-
-        .package-price-label {
-            font-size: 0.65rem;
-            color: var(--text-soft);
-            font-weight: 600;
-        }
-
-        .package-price-value {
-            font-size: 1.15rem;
-            font-weight: 900;
-            color: var(--primary);
-        }
-
-        .package-price-value .currency {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--gold-dark);
-            margin-right: 3px;
-        }
-
+        .package-price { display: flex; flex-direction: column; line-height: 1.2; }
+        .package-price-label { font-size: 0.65rem; color: var(--text-soft); font-weight: 600; }
+        .package-price-value { font-size: 1.15rem; font-weight: 900; color: var(--primary); }
+        .package-price-value .currency { font-size: 0.75rem; font-weight: 700; color: var(--gold-dark); margin-right: 3px; }
         .package-cta {
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            color: white;
-            padding: 9px 16px;
-            border-radius: 50px;
-            font-size: 0.78rem;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
+            color: white; padding: 9px 16px; border-radius: 50px;
+            font-size: 0.78rem; font-weight: 700;
+            display: inline-flex; align-items: center; gap: 5px;
             box-shadow: 0 4px 14px rgba(1, 56, 120, 0.25);
         }
-
         .package-cta:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(1, 56, 120, 0.35);
             background: linear-gradient(135deg, var(--gold), var(--gold-light));
             color: var(--primary);
         }
-
         .packages-empty {
-            text-align: center;
-            padding: 60px 20px;
+            text-align: center; padding: 60px 20px;
             background: var(--glass-bg);
             border: 2px dashed rgba(1, 56, 120, 0.15);
-            border-radius: var(--radius);
-            max-width: 520px;
-            margin: 0 auto;
+            border-radius: var(--radius); max-width: 520px; margin: 0 auto;
         }
-
         .packages-empty-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 20px;
+            width: 80px; height: 80px; margin: 0 auto 20px;
             background: linear-gradient(135deg, rgba(201, 162, 39, 0.15), rgba(201, 162, 39, 0.05));
-            border: 2px solid rgba(201, 162, 39, 0.3);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border: 2px solid rgba(201, 162, 39, 0.3); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
             color: var(--gold-dark);
         }
-
-        .packages-empty h3 {
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: var(--text);
-            margin-bottom: 8px;
-        }
-
-        .packages-empty p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
-
-        .packages-loading {
-            text-align: center;
-            padding: 60px 20px;
-            color: var(--text-soft);
-        }
-
+        .packages-empty h3 { font-size: 1.2rem; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+        .packages-empty p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px; }
+        .packages-loading { text-align: center; padding: 60px 20px; color: var(--text-soft); }
         .spinner {
-            width: 40px;
-            height: 40px;
+            width: 40px; height: 40px;
             border: 3px solid rgba(1, 56, 120, 0.15);
             border-top-color: var(--gold);
-            border-radius: 50%;
-            margin: 0 auto 16px;
+            border-radius: 50%; margin: 0 auto 16px;
             animation: spin 0.8s linear infinite;
         }
+        @keyframes spin { to { transform: rotate(360deg); } }
 
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* ===== Booking ===== */
+        /* Booking */
         .booking-section {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            position: relative;
-            overflow: hidden;
-            padding: 70px 0;
+            position: relative; overflow: hidden; padding: 70px 0;
         }
-
         .booking-section::before {
-            content: '';
-            position: absolute;
-            top: -30%;
-            right: -10%;
-            width: 400px;
-            height: 400px;
+            content: ''; position: absolute; top: -30%; right: -10%;
+            width: 400px; height: 400px;
             background: radial-gradient(circle, rgba(201, 162, 39, 0.15) 0%, transparent 70%);
             border-radius: 50%;
         }
-
         .booking-section::after {
-            content: '';
-            position: absolute;
-            bottom: -30%;
-            left: -10%;
-            width: 350px;
-            height: 350px;
+            content: ''; position: absolute; bottom: -30%; left: -10%;
+            width: 350px; height: 350px;
             background: radial-gradient(circle, rgba(232, 199, 102, 0.1) 0%, transparent 70%);
             border-radius: 50%;
         }
-
-        .booking-wrapper {
-            position: relative;
-            z-index: 2;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 32px;
-            align-items: center;
-        }
-
+        .booking-wrapper { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; }
         .booking-content { color: var(--secondary); }
-
-        .booking-content .section-label {
-            color: var(--gold-light);
-            background: rgba(201, 162, 39, 0.2);
-        }
-
-        .booking-content h2 {
-            font-size: 1.7rem;
-            font-weight: 900;
-            margin-bottom: 14px;
-            line-height: 1.3;
-        }
-
+        .booking-content .section-label { color: var(--gold-light); background: rgba(201, 162, 39, 0.2); }
+        .booking-content h2 { font-size: 1.7rem; font-weight: 900; margin-bottom: 14px; line-height: 1.3; }
         .booking-content h2 .gold { color: var(--gold-light); }
-
-        .booking-content > p {
-            opacity: 0.9;
-            margin-bottom: 22px;
-            font-size: 0.92rem;
-            line-height: 1.9;
-        }
-
-        .booking-features {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .booking-feature {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
+        .booking-content > p { opacity: 0.9; margin-bottom: 22px; font-size: 0.92rem; line-height: 1.9; }
+        .booking-features { display: flex; flex-direction: column; gap: 12px; }
+        .booking-feature { display: flex; align-items: center; gap: 12px; font-size: 0.9rem; font-weight: 600; }
         .booking-feature span {
-            width: 30px;
-            height: 30px;
+            width: 30px; height: 30px;
             background: rgba(201, 162, 39, 0.2);
             border: 1px solid var(--gold);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold-light);
-            flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--gold-light); flex-shrink: 0;
         }
-
-        /* ===== Booking Card ===== */
         .booking-card {
             background: var(--glass-bg-strong);
             -webkit-backdrop-filter: blur(24px) saturate(180%);
             backdrop-filter: blur(24px) saturate(180%);
             border: 1px solid var(--glass-border);
-            border-radius: var(--radius);
-            padding: 28px 22px;
+            border-radius: var(--radius); padding: 28px 22px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
+            position: relative; overflow: hidden;
         }
-
         .booking-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
             background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
         }
-
-        .booking-card-header {
-            text-align: center;
-            margin-bottom: 22px;
-        }
-
+        .booking-card-header { text-align: center; margin-bottom: 22px; }
         .booking-card-header .icon-wrap {
-            width: 58px;
-            height: 58px;
+            width: 58px; height: 58px;
             background: linear-gradient(135deg, var(--gold), var(--gold-light));
             border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 14px;
-            box-shadow: var(--shadow-gold);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 14px; box-shadow: var(--shadow-gold);
             color: var(--primary);
         }
-
-        .booking-card-header h3 {
-            font-size: 1.2rem;
-            font-weight: 900;
-            color: var(--text);
-            margin-bottom: 4px;
-        }
-
-        .booking-card-header p {
-            font-size: 0.82rem;
-            color: var(--text-soft);
-        }
-
-        .booking-form {
-            display: flex;
-            flex-direction: column;
-            gap: 13px;
-        }
-
+        .booking-card-header h3 { font-size: 1.2rem; font-weight: 900; color: var(--text); margin-bottom: 4px; }
+        .booking-card-header p { font-size: 0.82rem; color: var(--text-soft); }
+        .booking-form { display: flex; flex-direction: column; gap: 13px; }
         .form-group { display: flex; flex-direction: column; gap: 6px; }
-
-        .form-group label {
-            font-size: 0.78rem;
-            font-weight: 700;
-            color: var(--text);
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
+        .form-group label { font-size: 0.78rem; font-weight: 700; color: var(--text); }
+        .form-group input, .form-group select, .form-group textarea {
             padding: 12px 14px;
             border: 1.5px solid rgba(1, 56, 120, 0.15);
             border-radius: var(--radius-sm);
-            font-family: var(--font);
-            font-size: 0.9rem;
-            color: var(--text);
+            font-family: var(--font); font-size: 0.9rem; color: var(--text);
             background: rgba(255, 255, 255, 0.7);
-            transition: var(--transition);
-            outline: none;
-            width: 100%;
-            -webkit-appearance: none;
-            appearance: none;
+            transition: var(--transition); outline: none; width: 100%;
+            -webkit-appearance: none; appearance: none;
         }
-
         .form-group select {
             background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23013878' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: left 14px center;
-            background-size: 14px;
-            padding-left: 36px;
+            background-repeat: no-repeat; background-position: left 14px center;
+            background-size: 14px; padding-left: 36px;
         }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
             border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(1, 56, 120, 0.1);
             background: rgba(255, 255, 255, 0.95);
         }
-
         .form-group textarea { resize: vertical; min-height: 70px; }
         .form-row { display: grid; grid-template-columns: 1fr; gap: 12px; }
-
         .booking-submit {
-            margin-top: 6px;
-            padding: 14px;
+            margin-top: 6px; padding: 14px;
             background: linear-gradient(135deg, #25D366, #1da851);
-            color: white;
-            border-radius: var(--radius-sm);
-            font-family: var(--font);
-            font-size: 0.95rem;
-            font-weight: 800;
+            color: white; border-radius: var(--radius-sm);
+            font-family: var(--font); font-size: 0.95rem; font-weight: 800;
             transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
         }
+        .booking-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5); }
 
-        .booking-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
-        }
-
-        /* ===== Offices ===== */
-        .offices-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 18px;
-        }
-
+        /* Offices */
+        .offices-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
         .office-card {
             background: var(--glass-bg-strong);
             -webkit-backdrop-filter: blur(18px) saturate(180%);
             backdrop-filter: blur(18px) saturate(180%);
             border: 1px solid var(--glass-border);
-            border-radius: var(--radius);
-            padding: 24px 20px;
-            transition: var(--transition);
-            box-shadow: var(--glass-shadow);
-            position: relative;
-            overflow: hidden;
+            border-radius: var(--radius); padding: 24px 20px;
+            transition: var(--transition); box-shadow: var(--glass-shadow);
+            position: relative; overflow: hidden;
         }
-
-        .office-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--gold);
-        }
-
+        .office-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--gold); }
         .office-card.main {
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             border: 1px solid rgba(201, 162, 39, 0.3);
             color: var(--secondary);
         }
-
         .office-card.main::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 150px;
-            height: 150px;
+            content: ''; position: absolute; top: 0; right: 0;
+            width: 150px; height: 150px;
             background: radial-gradient(circle, rgba(201, 162, 39, 0.2) 0%, transparent 70%);
             border-radius: 50%;
         }
-
         .office-card.main .office-title,
         .office-card.main .office-address,
         .office-card.main .office-detail-label { color: var(--secondary); }
-
         .office-card.main .office-detail-label { opacity: 0.75; }
-
         .office-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 14px;
-            position: relative;
-            z-index: 2;
-            flex-wrap: wrap;
-            gap: 8px;
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 14px; position: relative; z-index: 2;
+            flex-wrap: wrap; gap: 8px;
         }
-
         .office-flag {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 14px;
-            border-radius: 50px;
-            font-size: 0.78rem;
-            font-weight: 800;
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 6px 14px; border-radius: 50px;
+            font-size: 0.78rem; font-weight: 800;
         }
-
-        .office-card.main .office-flag {
-            background: rgba(201, 162, 39, 0.2);
-            color: var(--gold-light);
-            border: 1px solid rgba(201, 162, 39, 0.3);
-        }
-
-        .office-card:not(.main) .office-flag {
-            background: rgba(1, 56, 120, 0.08);
-            color: var(--primary);
-        }
-
+        .office-card.main .office-flag { background: rgba(201, 162, 39, 0.2); color: var(--gold-light); border: 1px solid rgba(201, 162, 39, 0.3); }
+        .office-card:not(.main) .office-flag { background: rgba(1, 56, 120, 0.08); color: var(--primary); }
         .office-badge {
-            font-size: 0.66rem;
-            font-weight: 900;
-            padding: 4px 10px;
-            border-radius: 50px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
+            font-size: 0.66rem; font-weight: 900; padding: 4px 10px;
+            border-radius: 50px; letter-spacing: 0.5px; text-transform: uppercase;
         }
-
-        .office-card.main .office-badge {
-            background: var(--gold);
-            color: var(--primary);
-        }
-
-        .office-title {
-            font-size: 1.15rem;
-            font-weight: 900;
-            margin-bottom: 4px;
-            color: var(--text);
-            position: relative;
-            z-index: 2;
-        }
-
+        .office-card.main .office-badge { background: var(--gold); color: var(--primary); }
+        .office-title { font-size: 1.15rem; font-weight: 900; margin-bottom: 4px; color: var(--text); position: relative; z-index: 2; }
         .office-address {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            position: relative;
-            z-index: 2;
+            font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;
+            display: flex; align-items: center; gap: 6px;
+            position: relative; z-index: 2;
         }
-
         .office-details {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            display: flex; flex-direction: column; gap: 10px;
             padding-top: 16px;
             border-top: 1px solid rgba(1, 56, 120, 0.1);
-            position: relative;
-            z-index: 2;
+            position: relative; z-index: 2;
         }
-
-        .office-card.main .office-details {
-            border-top-color: rgba(255, 255, 255, 0.15);
-        }
-
-        .office-detail-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
+        .office-card.main .office-details { border-top-color: rgba(255, 255, 255, 0.15); }
+        .office-detail-item { display: flex; align-items: flex-start; gap: 10px; }
         .office-detail-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 9px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 32px; height: 32px; border-radius: 9px;
+            display: flex; align-items: center; justify-content: center;
             flex-shrink: 0;
         }
-
-        .office-card.main .office-detail-icon {
-            background: rgba(255, 255, 255, 0.12);
-            color: var(--gold-light);
-        }
-
-        .office-card:not(.main) .office-detail-icon {
-            background: rgba(1, 56, 120, 0.08);
-            color: var(--primary);
-        }
-
-        .office-detail-label {
-            font-size: 0.7rem;
-            font-weight: 700;
-            color: var(--text-soft);
-            display: block;
-            margin-bottom: 2px;
-        }
-
-        .office-detail-value {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text);
-            display: block;
-            word-break: break-word;
-        }
-
+        .office-card.main .office-detail-icon { background: rgba(255, 255, 255, 0.12); color: var(--gold-light); }
+        .office-card:not(.main) .office-detail-icon { background: rgba(1, 56, 120, 0.08); color: var(--primary); }
+        .office-detail-label { font-size: 0.7rem; font-weight: 700; color: var(--text-soft); display: block; margin-bottom: 2px; }
+        .office-detail-value { font-size: 0.85rem; font-weight: 600; color: var(--text); display: block; word-break: break-word; }
         .office-card.main .office-detail-value { color: var(--secondary); }
         .office-detail-value a { color: inherit; }
         .office-detail-value a:hover { color: var(--gold); }
         .office-card.main .office-detail-value a:hover { color: var(--gold-light); }
 
-        /* ===== Info Bar ===== */
+        /* Info Bar */
         .info-bar { padding: 40px 0; }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 14px;
-        }
-
+        .info-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
         .info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
+            display: flex; align-items: flex-start; gap: 14px;
             background: var(--glass-bg-strong);
             -webkit-backdrop-filter: blur(18px) saturate(180%);
             backdrop-filter: blur(18px) saturate(180%);
@@ -1390,238 +585,144 @@
             box-shadow: var(--glass-shadow);
             transition: var(--transition);
         }
-
-        .info-item:hover {
-            box-shadow: var(--shadow);
-            border-color: var(--gold);
-            transform: translateY(-2px);
-        }
-
+        .info-item:hover { box-shadow: var(--shadow); border-color: var(--gold); transform: translateY(-2px); }
         .info-icon {
-            width: 42px;
-            height: 42px;
+            width: 42px; height: 42px;
             background: linear-gradient(135deg, rgba(201, 162, 39, 0.18), rgba(201, 162, 39, 0.05));
             border: 1px solid rgba(201, 162, 39, 0.25);
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold-dark);
-            flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--gold-dark); flex-shrink: 0;
         }
-
-        .info-content h4 {
-            font-size: 0.76rem;
-            font-weight: 700;
-            color: var(--text-soft);
-            margin-bottom: 2px;
+        .info-content h4 { font-size: 0.76rem; font-weight: 700; color: var(--text-soft); margin-bottom: 2px; }
+        .info-content p, .info-content a {
+            font-size: 0.92rem; font-weight: 700; color: var(--text); word-break: break-word;
         }
-
-        .info-content p,
-        .info-content a {
-            font-size: 0.92rem;
-            font-weight: 700;
-            color: var(--text);
-            word-break: break-word;
-        }
-
         .info-content a:hover { color: var(--gold-dark); }
 
-        /* ===== CTA ===== */
+        /* Social Links */
+        .social-block { margin-top: 30px; text-align: center; }
+        .social-block h4 {
+            font-size: 0.82rem; font-weight: 700; color: var(--text-soft);
+            margin-bottom: 14px; letter-spacing: 1px;
+        }
+        .social-links-wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+        .social-link-btn {
+            width: 52px; height: 52px;
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            color: #FFF;
+            box-shadow: 0 4px 14px rgba(1, 56, 120, 0.15);
+            transition: var(--transition);
+        }
+        .social-link-btn:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 8px 24px rgba(1, 56, 120, 0.3); }
+        .social-link-btn svg { width: 24px; height: 24px; }
+        .social-link-btn.si-facebook { background: #1877F2; }
+        .social-link-btn.si-instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .social-link-btn.si-twitter { background: #000; }
+        .social-link-btn.si-tiktok { background: #000; }
+        .social-link-btn.si-youtube { background: #FF0000; }
+        .social-link-btn.si-snapchat { background: #FFFC00; color: #000; }
+        .social-link-btn.si-telegram { background: #0088CC; }
+        .social-link-btn.si-linkedin { background: #0A66C2; }
+        .social-link-btn.si-whatsapp { background: #25D366; }
+        .social-link-btn.si-other { background: var(--primary); }
+
+        /* CTA */
         .cta {
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            color: var(--secondary);
-            text-align: center;
-            padding: 60px 16px;
-            position: relative;
-            overflow: hidden;
+            color: var(--secondary); text-align: center;
+            padding: 60px 16px; position: relative; overflow: hidden;
         }
-
         .cta::before {
-            content: '';
-            position: absolute;
-            inset: 0;
+            content: ''; position: absolute; inset: 0;
             background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.1;
+            background-size: cover; background-position: center; opacity: 0.1;
         }
-
         .cta .container { position: relative; z-index: 2; }
+        .cta h2 { font-size: 1.6rem; font-weight: 900; margin-bottom: 12px; line-height: 1.3; }
+        .cta p { opacity: 0.92; margin-bottom: 26px; max-width: 620px; margin-left: auto; margin-right: auto; font-size: 0.95rem; }
+        .cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 
-        .cta h2 {
-            font-size: 1.6rem;
-            font-weight: 900;
-            margin-bottom: 12px;
-            line-height: 1.3;
-        }
-
-        .cta p {
-            opacity: 0.92;
-            margin-bottom: 26px;
-            max-width: 620px;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 0.95rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-        }
-
-        /* ===== Footer ===== */
-        .footer {
-            background: var(--primary-dark);
-            color: rgba(255, 255, 255, 0.8);
-            padding: 50px 0 0;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-            padding-bottom: 30px;
-        }
-
+        /* Footer */
+        .footer { background: var(--primary-dark); color: rgba(255, 255, 255, 0.8); padding: 50px 0 0; }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 30px; padding-bottom: 30px; }
         .footer-brand .logo { color: var(--secondary); margin-bottom: 14px; }
         .footer-brand .logo-text .main { color: var(--secondary); }
         .footer-brand .logo-text .sub { color: rgba(255, 255, 255, 0.6); }
         .footer-brand .logo-img { height: 50px; }
-
-        .footer-brand p {
-            font-size: 0.86rem;
-            line-height: 1.9;
-            margin-bottom: 10px;
-        }
-
+        .footer-brand p { font-size: 0.86rem; line-height: 1.9; margin-bottom: 10px; }
         .footer-cr {
-            display: inline-block;
-            margin-top: 8px;
+            display: inline-block; margin-top: 8px;
             padding: 7px 14px;
             background: rgba(255, 255, 255, 0.08);
             border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 50px;
-            font-size: 0.72rem;
-            color: var(--gold-light);
-            font-weight: 700;
+            border-radius: 50px; font-size: 0.72rem;
+            color: var(--gold-light); font-weight: 700;
         }
-
         .footer h4 {
-            color: var(--secondary);
-            font-size: 0.95rem;
-            font-weight: 800;
-            margin-bottom: 14px;
-            position: relative;
-            padding-bottom: 8px;
+            color: var(--secondary); font-size: 0.95rem; font-weight: 800;
+            margin-bottom: 14px; position: relative; padding-bottom: 8px;
         }
-
         .footer h4::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 28px;
-            height: 2px;
-            background: var(--gold);
-            border-radius: 2px;
+            content: ''; position: absolute; bottom: 0; right: 0;
+            width: 28px; height: 2px; background: var(--gold); border-radius: 2px;
         }
-
         .footer ul { display: flex; flex-direction: column; gap: 8px; }
-
         .footer a {
-            font-size: 0.86rem;
-            color: rgba(255, 255, 255, 0.7);
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-size: 0.86rem; color: rgba(255, 255, 255, 0.7);
+            display: flex; align-items: center; gap: 8px;
         }
-
         .footer a:hover { color: var(--gold-light); padding-right: 4px; }
-
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 18px 0;
-            text-align: center;
-            font-size: 0.78rem;
-            color: rgba(255, 255, 255, 0.5);
+            padding: 18px 0; text-align: center;
+            font-size: 0.78rem; color: rgba(255, 255, 255, 0.5);
         }
+        .footer-socials {
+            display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px;
+        }
+        .footer-socials .social-link-btn {
+            width: 38px; height: 38px; border-radius: 10px;
+        }
+        .footer-socials .social-link-btn svg { width: 18px; height: 18px; }
 
-        /* ===== Floating Buttons ===== */
+        /* Floating Buttons */
         .floating-buttons {
-            position: fixed;
-            bottom: 18px;
-            left: 18px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            z-index: 900;
+            position: fixed; bottom: 18px; left: 18px;
+            display: flex; flex-direction: column; gap: 10px; z-index: 900;
         }
-
         .floating-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 50px; height: 50px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.3);
             transition: var(--transition);
             position: relative;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-
         .floating-btn:hover { transform: scale(1.1); }
-
         .floating-btn::after {
             content: attr(data-label);
-            position: absolute;
-            right: calc(100% + 12px);
-            top: 50%;
+            position: absolute; right: calc(100% + 12px); top: 50%;
             transform: translateY(-50%) translateX(8px);
-            background: var(--primary-dark);
-            color: var(--secondary);
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-size: 0.72rem;
-            font-weight: 600;
-            white-space: nowrap;
-            opacity: 0;
-            pointer-events: none;
+            background: var(--primary-dark); color: var(--secondary);
+            padding: 6px 12px; border-radius: 8px;
+            font-size: 0.72rem; font-weight: 600; white-space: nowrap;
+            opacity: 0; pointer-events: none;
             transition: var(--transition);
         }
+        .floating-btn:hover::after { opacity: 1; transform: translateY(-50%) translateX(0); }
+        .whatsapp-btn { background: linear-gradient(135deg, #25D366, #1da851); color: white; }
+        .call-btn { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: var(--secondary); }
 
-        .floating-btn:hover::after {
-            opacity: 1;
-            transform: translateY(-50%) translateX(0);
-        }
-
-        .whatsapp-btn {
-            background: linear-gradient(135deg, #25D366, #1da851);
-            color: white;
-        }
-
-        .call-btn {
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            color: var(--secondary);
-        }
-
-        /* ===== Reveal ===== */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-
+        /* Reveal */
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         .delay-1 { transition-delay: 0.12s; }
         .delay-2 { transition-delay: 0.24s; }
         .delay-3 { transition-delay: 0.36s; }
 
-        /* ===== RESPONSIVE ===== */
-
+        /* Responsive */
         @media (max-width: 380px) {
             .logo-img { height: 38px; }
             .logo-mark { width: 38px; height: 38px; font-size: 1.1rem; }
@@ -1632,7 +733,6 @@
             .hero h1 { font-size: 1.7rem; }
             .hero-badge { font-size: 0.7rem; padding: 6px 14px; }
         }
-
         @media (min-width: 640px) {
             .container { padding: 0 24px; }
             .section { padding: 80px 0; }
@@ -1656,7 +756,6 @@
             .about-visual { padding: 32px 26px; }
             .logo-img { height: 48px; }
         }
-
         @media (min-width: 900px) {
             :root { --header-h: 74px; }
             .nav { display: block; }
@@ -1712,7 +811,6 @@
             .booking-content > p { font-size: 1.02rem; }
             .booking-feature { font-size: 0.95rem; }
         }
-
         @media (min-width: 1100px) {
             .offices-grid { grid-template-columns: repeat(4, 1fr); }
             .hero h1 { font-size: 3.9rem; }
@@ -1723,25 +821,16 @@
             padding-left: 36px;
             padding-right: 14px;
         }
-
         @media (max-width: 900px) {
-            .form-group input,
-            .form-group select,
-            .form-group textarea {
-                font-size: 16px;
-            }
+            .form-group input, .form-group select, .form-group textarea { font-size: 16px; }
         }
-
         @supports (padding: env(safe-area-inset-bottom)) {
             .floating-buttons {
                 bottom: calc(18px + env(safe-area-inset-bottom));
                 left: calc(18px + env(safe-area-inset-left));
             }
-            .footer-bottom {
-                padding-bottom: calc(18px + env(safe-area-inset-bottom));
-            }
+            .footer-bottom { padding-bottom: calc(18px + env(safe-area-inset-bottom)); }
         }
-
         html, body { max-width: 100%; }
         .hero, .section, .cta, .footer { overflow-x: hidden; }
     </style>
@@ -1790,12 +879,12 @@
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <span class="hero-badge">
+            <span class="hero-badge" id="heroBadge">
                 <span class="dot"></span>
                 شركة المتحدة بلس · سجل تجاري 2026-06-0219
             </span>
-            <h1>رحلتك نحو العالم<br>تبدأ مع <span class="highlight">UNI PLUS</span></h1>
-            <p>الريادة في مجال السفر والسياحة والدراسة — نسهّل لك تذاكر الطيران وإجراءات الحجز والاستقبال، ونفتح لك آفاق العالم من بنغازي إلى إسطنبول وكوالالمبور وبالي.</p>
+            <h1 id="heroTitle">رحلتك نحو العالم<br>تبدأ مع <span class="highlight">UNI PLUS</span></h1>
+            <p id="heroSubtitle">الريادة في مجال السفر والسياحة والدراسة — نسهّل لك تذاكر الطيران وإجراءات الحجز والاستقبال، ونفتح لك آفاق العالم من بنغازي إلى إسطنبول وكوالالمبور وبالي.</p>
             <div class="hero-buttons">
                 <a href="#booking" class="btn btn-gold">احجز رحلتك الآن</a>
                 <a href="#packages" class="btn btn-outline">تصفح العروض والباقات</a>
@@ -1828,29 +917,29 @@
                             من نحن
                         </span>
                         <h3>شركة <span class="gold">UNI PLUS</span><br>سفر · سياحة · دراسة</h3>
-                        <p>إحدى شركات المتحدة بلس للخدمات الإعلامية والتسويقية واللوجستية، نعمل على تسهيل رحلة السفر والدراسة لعملائنا بمعايير احترافية.</p>
+                        <p id="aboutVisualDesc">إحدى شركات المتحدة بلس للخدمات الإعلامية والتسويقية واللوجستية، نعمل على تسهيل رحلة السفر والدراسة لعملائنا بمعايير احترافية.</p>
                     </div>
                     <div class="about-visual-stats">
                         <div class="about-visual-stat">
-                            <h4>4</h4>
-                            <p>مقرات وفروع</p>
+                            <h4 id="stat1Val">4</h4>
+                            <p id="stat1Label">مقرات وفروع</p>
                         </div>
                         <div class="about-visual-stat">
-                            <h4>2026</h4>
-                            <p>سجل تجاري</p>
+                            <h4 id="stat2Val">2026</h4>
+                            <p id="stat2Label">سجل تجاري</p>
                         </div>
                     </div>
                 </div>
                 <div class="about-content reveal delay-1">
                     <span class="section-label">من نحن</span>
-                    <h2>نفتح لك آفاق العالم بثقة واحترافية</h2>
-                    <p>شركة UNI PLUS هي إحدى شركات المتحدة بلس للخدمات الإعلامية والتسويقية واللوجستية، متخصصة في مجال السفر والسياحة والدراسة. نقدم خدمات متكاملة تشمل توفير وتسهيل تذاكر الطيران، وتسهيل إجراءات السفر والحجز والاستقبال للمعنيين بالسفر والدراسة.</p>
+                    <h2 id="aboutTitle">نفتح لك آفاق العالم بثقة واحترافية</h2>
+                    <p id="aboutDesc">شركة UNI PLUS هي إحدى شركات المتحدة بلس للخدمات الإعلامية والتسويقية واللوجستية، متخصصة في مجال السفر والسياحة والدراسة. نقدم خدمات متكاملة تشمل توفير وتسهيل تذاكر الطيران، وتسهيل إجراءات السفر والحجز والاستقبال للمعنيين بالسفر والدراسة.</p>
                     <div class="vision-card">
                         <h4>
                             <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
                             رؤيتنا
                         </h4>
-                        <p>الريادة في مجال السفر والسياحة والدراسة، وتقديم خدمات سياحية متنوعة وسهولة التواصل، والعمل على الانفتاح الكامل لدى المستهدفين من السفر للخارج.</p>
+                        <p id="aboutVision">الريادة في مجال السفر والسياحة والدراسة، وتقديم خدمات سياحية متنوعة وسهولة التواصل، والعمل على الانفتاح الكامل لدى المستهدفين من السفر للخارج.</p>
                     </div>
                 </div>
             </div>
@@ -1891,7 +980,7 @@
         </div>
     </section>
 
-    <!-- ========== NEW: Packages & Offers Section ========== -->
+    <!-- Packages -->
     <section class="section packages-section" id="packages">
         <div class="container">
             <div class="section-header reveal">
@@ -1995,143 +1084,18 @@
             <div class="section-header reveal">
                 <span class="section-label">فروعنا</span>
                 <h2 class="section-title">مقرنا الرئيسي وفروعنا حول العالم</h2>
-                <p class="section-subtitle">المقر الرئيسي في بنغازي — وفروع في إسطنبول وكوالالمبور وبالي</p>
+                <p class="section-subtitle">المقر الرئيسي في بنغازي — وفروع حول العالم</p>
             </div>
-            <div class="offices-grid">
-
-                <div class="office-card main reveal">
-                    <div class="office-header">
-                        <span class="office-flag">
-                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            ليبيا
-                        </span>
-                        <span class="office-badge">المقر الرئيسي</span>
-                    </div>
-                    <h3 class="office-title">بنغازي</h3>
-                    <p class="office-address">
-                        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        بنغازي، ليبيا
-                    </p>
-                    <div class="office-details">
-                        <div class="office-detail-item">
-                            <div class="office-detail-icon">
-                                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.53 3.66 1.44 5.18L2 22l4.99-1.31A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.22-.45-4.58-1.24l-.33-.19-2.96-.78.31.31A7.98 7.98 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/></svg>
-                            </div>
-                            <div>
-                                <span class="office-detail-label">واتساب</span>
-                                <span class="office-detail-value"><a href="https://wa.me/218920010505" target="_blank" rel="noopener">0920010505</a></span>
-                            </div>
-                        </div>
-                        <div class="office-detail-item">
-                            <div class="office-detail-icon">
-                                <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            </div>
-                            <div>
-                                <span class="office-detail-label">المكالمات</span>
-                                <span class="office-detail-value"><a href="tel:+218920010505">0920010505</a></span>
-                            </div>
-                        </div>
-                        <div class="office-detail-item">
-                            <div class="office-detail-icon">
-                                <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                            </div>
-                            <div>
-                                <span class="office-detail-label">أيام العمل</span>
-                                <span class="office-detail-value">السبت — الخميس</span>
-                            </div>
-                        </div>
-                        <div class="office-detail-item">
-                            <div class="office-detail-icon">
-                                <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            </div>
-                            <div>
-                                <span class="office-detail-label">الموقع على الخريطة</span>
-                                <span class="office-detail-value"><a href="https://maps.app.goo.gl/VvFdZ2YcK5aTRnBr8?g_st=ic" target="_blank" rel="noopener">عرض على Google Maps</a></span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="offices-grid" id="officesGrid">
+                <div class="packages-loading" style="grid-column:1/-1;">
+                    <div class="spinner"></div>
+                    <p>جارٍ تحميل الفروع...</p>
                 </div>
-
-                <div class="office-card reveal delay-1">
-                    <div class="office-header">
-                        <span class="office-flag">
-                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            تركيا
-                        </span>
-                    </div>
-                    <h3 class="office-title">إسطنبول</h3>
-                    <p class="office-address">
-                        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        إسطنبول، تركيا
-                    </p>
-                    <div class="office-details">
-                        <div class="office-detail-item">
-                            <div class="office-detail-icon">
-                                <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
-                            </div>
-                            <div>
-                                <span class="office-detail-label">الخدمة</span>
-                                <span class="office-detail-value">فرع سفر وسياحة</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="office-card reveal delay-2">
-                    <div class="office-header">
-                        <span class="office-flag">
-                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            ماليزيا
-                        </span>
-                    </div>
-                    <h3 class="office-title">كوالالمبور</h3>
-                    <p class="office-address">
-                        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        كوالالمبور، ماليزيا
-                    </p>
-                    <div class="office-details">
-                        <div class="office-detail-item">
-                            <div class="office-detail-icon">
-                                <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                            </div>
-                            <div>
-                                <span class="office-detail-label">الخدمة</span>
-                                <span class="office-detail-value">فرع سفر ودراسة</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="office-card reveal delay-3">
-                    <div class="office-header">
-                        <span class="office-flag">
-                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            إندونيسيا
-                        </span>
-                    </div>
-                    <h3 class="office-title">بالي</h3>
-                    <p class="office-address">
-                        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        بالي، إندونيسيا
-                    </p>
-                    <div class="office-details">
-                        <div class="office-detail-item">
-                            <div class="office-detail-icon">
-                                <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
-                            </div>
-                            <div>
-                                <span class="office-detail-label">الخدمة</span>
-                                <span class="office-detail-value">فرع سفر وسياحة</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Info Bar -->
+    <!-- Info Bar + Social -->
     <section class="info-bar">
         <div class="container">
             <div class="info-grid">
@@ -2141,7 +1105,7 @@
                     </div>
                     <div class="info-content">
                         <h4>واتساب</h4>
-                        <a href="https://wa.me/218920010505" target="_blank" rel="noopener">0920010505</a>
+                        <a href="#" id="infoWhatsapp" data-wa>—</a>
                     </div>
                 </div>
                 <div class="info-item reveal delay-1">
@@ -2150,7 +1114,7 @@
                     </div>
                     <div class="info-content">
                         <h4>المكالمات</h4>
-                        <a href="tel:+218920010505">0920010505</a>
+                        <a href="#" id="infoPhone" data-tel>—</a>
                     </div>
                 </div>
                 <div class="info-item reveal delay-2">
@@ -2159,7 +1123,7 @@
                     </div>
                     <div class="info-content">
                         <h4>أيام العمل</h4>
-                        <p>السبت — الخميس</p>
+                        <p id="infoHours">—</p>
                     </div>
                 </div>
                 <div class="info-item reveal delay-3">
@@ -2168,9 +1132,15 @@
                     </div>
                     <div class="info-content">
                         <h4>السجل التجاري</h4>
-                        <p>2026-06-0219</p>
+                        <p id="infoCR">—</p>
                     </div>
                 </div>
+            </div>
+
+            <!-- Social links -->
+            <div class="social-block" id="socialBlock" style="display:none;">
+                <h4>تابعنا على</h4>
+                <div class="social-links-wrap" id="socialLinksWrap"></div>
             </div>
         </div>
     </section>
@@ -2181,11 +1151,11 @@
             <h2>جاهز لرحلتك القادمة؟</h2>
             <p>تواصل معنا اليوم واحصل على استشارة مجانية وعرض سعر مخصص لرحلتك أو دراستك بالخارج.</p>
             <div class="cta-buttons">
-                <a href="https://wa.me/218920010505" target="_blank" rel="noopener" class="btn btn-gold">
+                <a href="#" data-wa class="btn btn-gold">
                     <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.53 3.66 1.44 5.18L2 22l4.99-1.31A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.22-.45-4.58-1.24l-.33-.19-2.96-.78.31.31A7.98 7.98 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/></svg>
                     تواصل عبر واتساب
                 </a>
-                <a href="tel:+218920010505" class="btn btn-outline">
+                <a href="#" data-tel class="btn btn-outline">
                     <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     اتصل بنا
                 </a>
@@ -2200,7 +1170,8 @@
                 <div class="footer-brand">
                     <div class="logo" id="logoFooter"></div>
                     <p>إحدى شركات المتحدة بلس للخدمات الإعلامية والتسويقية واللوجستية. نقدم خدمات السفر والسياحة والدراسة بمعايير احترافية.</p>
-                    <span class="footer-cr">السجل التجاري: 2026-06-0219</span>
+                    <span class="footer-cr" id="footerCR">السجل التجاري: 2026-06-0219</span>
+                    <div class="footer-socials" id="footerSocials"></div>
                 </div>
                 <div>
                     <h4>روابط سريعة</h4>
@@ -2216,21 +1187,21 @@
                 <div>
                     <h4>تواصل معنا</h4>
                     <ul>
-                        <li><a href="https://wa.me/218920010505" target="_blank" rel="noopener">
+                        <li><a href="#" data-wa id="footerWaLink">
                             <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.53 3.66 1.44 5.18L2 22l4.99-1.31A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.22-.45-4.58-1.24l-.33-.19-2.96-.78.31.31A7.98 7.98 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/></svg>
-                            واتساب: 0920010505
+                            واتساب: <span id="footerWaText">—</span>
                         </a></li>
-                        <li><a href="tel:+218920010505">
+                        <li><a href="#" data-tel id="footerTelLink">
                             <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            هاتف: 0920010505
+                            هاتف: <span id="footerTelText">—</span>
                         </a></li>
-                        <li><a href="https://maps.app.goo.gl/VvFdZ2YcK5aTRnBr8?g_st=ic" target="_blank" rel="noopener">
+                        <li><a href="#" id="footerAddressLink" target="_blank" rel="noopener">
                             <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            بنغازي، ليبيا
+                            <span id="footerAddress">—</span>
                         </a></li>
                         <li><a href="#offices">
                             <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                            السبت — الخميس
+                            <span id="footerHours">—</span>
                         </a></li>
                     </ul>
                 </div>
@@ -2243,17 +1214,17 @@
 
     <!-- Floating Buttons -->
     <div class="floating-buttons">
-        <a href="https://wa.me/218920010505" target="_blank" rel="noopener" class="floating-btn whatsapp-btn" data-label="واتساب" aria-label="واتساب">
+        <a href="#" data-wa class="floating-btn whatsapp-btn" data-label="واتساب" aria-label="واتساب">
             <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.53 3.66 1.44 5.18L2 22l4.99-1.31A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.22-.45-4.58-1.24l-.33-.19-2.96-.78.31.31A7.98 7.98 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.5-5.5c-.25-.12-1.47-.72-1.69-.8-.22-.08-.38-.12-.54.12-.16.25-.62.8-.76.97-.14.16-.28.18-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.54-1.3-.74-1.79-.2-.47-.4-.4-.54-.4-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.16 1.73 2.64 4.19 3.7.59.25 1.05.4 1.41.51.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
         </a>
-        <a href="tel:+218920010505" class="floating-btn call-btn" data-label="اتصل بنا" aria-label="اتصال">
+        <a href="#" data-tel class="floating-btn call-btn" data-label="اتصل بنا" aria-label="اتصال">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         </a>
     </div>
 
     <script>
         // ============================================
-        // ⭐ Supabase Configuration
+        // Supabase Config
         // ============================================
         const SUPABASE_URL = "https://mmqbwmnvcpblateekoed.supabase.co";
         const SUPABASE_KEY = "sb_publishable_2kGdSLEcZLKBFjjolUo3Lg_4D-gR7fY";
@@ -2263,24 +1234,25 @@
             'Content-Type': 'application/json'
         };
 
-        // ============================================
-        // ⭐ الشعار — lo.png
-        // ============================================
-        const LOGO_URL = "lo.png";
+        // حالة عامة
+        const state = {
+            settings: {},
+            social: [],
+            whatsapp: '218920010505',
+            phone: '0920010505'
+        };
 
+        const LOGO_URL = "lo.png";
         function renderLogo() {
             const html = LOGO_URL
                 ? `<img src="${LOGO_URL}" alt="UNI PLUS" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
                 : '';
-
             const fallback = `<span class="logo-mark" style="display:${LOGO_URL ? 'none' : 'flex'}">U</span>
                 <span class="logo-text">
                     <span class="main">UNI<span class="plus">PLUS</span></span>
                     <span class="sub">سفر · سياحة · دراسة</span>
                 </span>`;
-
             const final = LOGO_URL ? (html + fallback) : fallback;
-
             document.getElementById('logoContainer').innerHTML = final;
             document.getElementById('logoFooter').innerHTML = final;
         }
@@ -2309,7 +1281,6 @@
                 document.body.style.overflow = '';
             });
         });
-
         window.addEventListener('resize', () => {
             if (window.innerWidth >= 900) {
                 hamburger.classList.remove('active');
@@ -2349,7 +1320,7 @@
             });
         });
 
-        // Reveal on scroll
+        // Reveal
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -2358,51 +1329,274 @@
                 }
             });
         }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
         function observeReveals() {
             document.querySelectorAll('.reveal:not(.active)').forEach(el => revealObserver.observe(el));
         }
         observeReveals();
 
-        // Booking form -> WhatsApp
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('fullName').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const travelers = document.getElementById('travelers').value;
-            const serviceType = document.getElementById('serviceType').value;
-            const destination = document.getElementById('destination').value.trim();
-            const departDate = document.getElementById('departDate').value;
-            const notes = document.getElementById('notes').value.trim();
-
-            let msg = `🌟 *طلب حجز جديد — UNI PLUS* 🌟\n\n`;
-            msg += `👤 *الاسم:* ${name}\n`;
-            msg += `📱 *رقم الهاتف:* ${phone}\n`;
-            msg += `🛎️ *نوع الخدمة:* ${serviceType}\n`;
-            msg += `👥 *عدد المسافرين:* ${travelers}\n`;
-            if (destination) msg += `📍 *الوجهة:* ${destination}\n`;
-            if (departDate) msg += `📅 *تاريخ المغادرة:* ${departDate}\n`;
-            if (notes) msg += `📝 *ملاحظات:* ${notes}\n`;
-            msg += `\nيرجى التواصل لتأكيد الحجز وتقديم العرض.`;
-
-            window.open(`https://wa.me/218920010505?text=${encodeURIComponent(msg)}`, '_blank');
-        });
+        // Helpers
+        function escapeHtml(s) {
+            if (s == null) return '';
+            return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+        function formatPrice(val) {
+            const n = Number(val);
+            if (isNaN(n)) return val;
+            return n.toLocaleString('en-US', { maximumFractionDigits: 2 });
+        }
+        function setText(id, v) {
+            const el = document.getElementById(id);
+            if (el && v != null && v !== '') el.textContent = v;
+        }
+        function waDisplay(n) {
+            if (!n) return '—';
+            // إذا كان دولي (218...) → أظهر محلي (09...)
+            if (String(n).startsWith('218')) return '0' + String(n).substring(3);
+            return n;
+        }
 
         // ============================================
-        // ⭐ تحميل الباقات والعروض من Supabase
+        // 1) الإعدادات
+        // ============================================
+        async function loadSettings() {
+            try {
+                const res = await fetch(`${SUPABASE_URL}/rest/v1/site_settings?select=*&id=eq.1`, { headers: SUPABASE_HEADERS });
+                if (!res.ok) return;
+                const data = await res.json();
+                if (!data[0]) return;
+                const s = data[0];
+                state.settings = s;
+                state.whatsapp = s.whatsapp || '218920010505';
+                state.phone = s.phone || '0920010505';
+
+                // Hero
+                if (s.hero_title) {
+                    // إذا كان يحتوي على UNI PLUS → لونه ذهبي
+                    const t = escapeHtml(s.hero_title).replace(/\n/g, '<br>');
+                    document.getElementById('heroTitle').innerHTML = t
+                        .replace(/UNI PLUS/, '<span class="highlight">UNI PLUS</span>');
+                }
+                if (s.hero_subtitle) setText('heroSubtitle', s.hero_subtitle);
+                if (s.company_badge) {
+                    document.getElementById('heroBadge').innerHTML = `<span class="dot"></span> ${escapeHtml(s.company_badge)}`;
+                }
+
+                // About
+                setText('aboutTitle', s.about_title);
+                setText('aboutDesc', s.about_description);
+                setText('aboutVision', s.about_vision);
+                setText('aboutVisualDesc', s.about_description);
+                setText('stat1Val', s.about_stat_1_value);
+                setText('stat1Label', s.about_stat_1_label);
+                setText('stat2Val', s.about_stat_2_value);
+                setText('stat2Label', s.about_stat_2_label);
+
+                // Info bar
+                setText('infoHours', s.work_hours);
+                setText('infoCR', s.commercial_register);
+
+                // Footer
+                setText('footerHours', s.work_hours);
+                setText('footerCR', s.commercial_register ? `السجل التجاري: ${s.commercial_register}` : '');
+                setText('footerAddress', s.address);
+                setText('footerWaText', waDisplay(s.whatsapp));
+                setText('footerTelText', s.phone);
+
+                // روابط الواتساب
+                const waUrl = `https://wa.me/${state.whatsapp}`;
+                document.querySelectorAll('[data-wa]').forEach(a => a.href = waUrl);
+                setText('infoWhatsapp', waDisplay(s.whatsapp));
+
+                // روابط الهاتف
+                const telUrl = `tel:${state.phone}`;
+                document.querySelectorAll('[data-tel]').forEach(a => a.href = telUrl);
+                setText('infoPhone', s.phone);
+
+                // رابط العنوان/الخريطة
+                const addrLink = document.getElementById('footerAddressLink');
+                if (addrLink && s.maps_url) addrLink.href = s.maps_url;
+
+            } catch (e) {
+                console.error('loadSettings error:', e);
+            }
+        }
+
+        // ============================================
+        // 2) وسائل التواصل
+        // ============================================
+        function platformSvg(p) {
+            const icons = {
+                facebook: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>',
+                instagram: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>',
+                twitter: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>',
+                tiktok: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg>',
+                youtube: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>',
+                snapchat: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03c-.135 0-.313-.031-.538-.074-.36-.075-.765-.135-1.273-.135-.3 0-.599.015-.913.074-.6.104-1.123.464-1.723.884-.853.599-1.826 1.288-3.294 1.288-.06 0-.119-.015-.18-.015h-.149c-1.468 0-2.427-.674-3.279-1.273-.599-.42-1.122-.779-1.723-.884-.314-.06-.614-.075-.913-.075-.509 0-.914.06-1.274.135-.224.045-.404.074-.539.074-.286 0-.479-.135-.554-.404-.061-.195-.106-.375-.135-.555-.045-.194-.105-.479-.165-.57-1.872-.282-2.906-.701-3.146-1.27-.03-.076-.045-.15-.045-.226-.015-.24.164-.465.42-.51 3.265-.538 4.73-3.876 4.791-4.013l.015-.015c.179-.345.209-.645.12-.869-.194-.45-.883-.675-1.333-.81-.135-.044-.254-.09-.345-.119-.824-.33-1.229-.72-1.214-1.169.015-.359.285-.689.735-.838.15-.06.329-.089.51-.089.12 0 .299.015.464.104.374.181.733.286 1.034.301.198 0 .315-.045.39-.09-.008-.165-.018-.33-.03-.51l-.002-.06c-.105-1.628-.23-3.653.297-4.847C7.887 1.069 11.216.793 12.206.793z"/></svg>',
+                telegram: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>',
+                linkedin: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>',
+                whatsapp: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>',
+                other: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>'
+            };
+            return icons[p] || icons.other;
+        }
+
+        async function loadSocialLinks() {
+            try {
+                const res = await fetch(
+                    `${SUPABASE_URL}/rest/v1/social_links?select=*&is_active=eq.true&order=sort_order.asc`,
+                    { headers: SUPABASE_HEADERS }
+                );
+                if (!res.ok) return;
+                const links = await res.json();
+                state.social = links || [];
+
+                if (!links.length) return;
+
+                const html = links.map(l => `
+                    <a href="${escapeHtml(l.url)}" target="_blank" rel="noopener"
+                       class="social-link-btn si-${escapeHtml(l.platform)}"
+                       title="${escapeHtml(l.label || l.platform)}"
+                       aria-label="${escapeHtml(l.label || l.platform)}">
+                        ${platformSvg(l.platform)}
+                    </a>
+                `).join('');
+
+                // في Info Bar
+                const block = document.getElementById('socialBlock');
+                const wrap = document.getElementById('socialLinksWrap');
+                if (wrap) wrap.innerHTML = html;
+                if (block) block.style.display = 'block';
+
+                // في Footer
+                const fw = document.getElementById('footerSocials');
+                if (fw) fw.innerHTML = html;
+
+            } catch (e) {
+                console.error('loadSocialLinks error:', e);
+            }
+        }
+
+        // ============================================
+        // 3) الفروع
+        // ============================================
+        async function loadOffices() {
+            const grid = document.getElementById('officesGrid');
+            if (!grid) return;
+            try {
+                const res = await fetch(
+                    `${SUPABASE_URL}/rest/v1/offices?select=*&is_active=eq.true&order=sort_order.asc`,
+                    { headers: SUPABASE_HEADERS }
+                );
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                const offices = await res.json();
+
+                if (!offices.length) {
+                    grid.innerHTML = `<div class="packages-empty" style="grid-column:1/-1;"><h3>لا توجد فروع حالياً</h3></div>`;
+                    return;
+                }
+                grid.innerHTML = offices.map((o, i) => renderOfficeCard(o, i)).join('');
+                observeReveals();
+            } catch (e) {
+                console.error('offices error:', e);
+                grid.innerHTML = `<div class="packages-empty" style="grid-column:1/-1;"><h3>تعذّر تحميل الفروع</h3></div>`;
+            }
+        }
+
+        function renderOfficeCard(o, index) {
+            const isMain = o.is_main === true;
+            const cls = isMain ? 'office-card main reveal' : 'office-card reveal delay-' + Math.min(index, 3);
+            const delay = isMain ? '' : '';
+            const flagName = o.country || '';
+            const waNum = o.whatsapp ? String(o.whatsapp).replace(/\D/g, '') : '';
+            const waUrl = waNum ? `https://wa.me/${waNum}` : '#';
+
+            const details = [];
+            if (o.whatsapp) {
+                details.push(`
+                    <div class="office-detail-item">
+                        <div class="office-detail-icon">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.53 3.66 1.44 5.18L2 22l4.99-1.31A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.22-.45-4.58-1.24l-.33-.19-2.96-.78.31.31A7.98 7.98 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/></svg>
+                        </div>
+                        <div>
+                            <span class="office-detail-label">واتساب</span>
+                            <span class="office-detail-value"><a href="${waUrl}" target="_blank" rel="noopener">${escapeHtml(o.whatsapp)}</a></span>
+                        </div>
+                    </div>
+                `);
+            }
+            if (o.phone) {
+                details.push(`
+                    <div class="office-detail-item">
+                        <div class="office-detail-icon">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <span class="office-detail-label">المكالمات</span>
+                            <span class="office-detail-value"><a href="tel:${escapeHtml(o.phone)}">${escapeHtml(o.phone)}</a></span>
+                        </div>
+                    </div>
+                `);
+            }
+            if (o.maps_url) {
+                details.push(`
+                    <div class="office-detail-item">
+                        <div class="office-detail-icon">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <span class="office-detail-label">الموقع على الخريطة</span>
+                            <span class="office-detail-value"><a href="${escapeHtml(o.maps_url)}" target="_blank" rel="noopener">عرض على Google Maps</a></span>
+                        </div>
+                    </div>
+                `);
+            }
+            if (!details.length && o.service) {
+                details.push(`
+                    <div class="office-detail-item">
+                        <div class="office-detail-icon">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+                        </div>
+                        <div>
+                            <span class="office-detail-label">الخدمة</span>
+                            <span class="office-detail-value">${escapeHtml(o.service)}</span>
+                        </div>
+                    </div>
+                `);
+            }
+
+            return `
+                <div class="${cls}">
+                    <div class="office-header">
+                        <span class="office-flag">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            ${escapeHtml(flagName)}
+                        </span>
+                        ${isMain ? '<span class="office-badge">المقر الرئيسي</span>' : ''}
+                    </div>
+                    <h3 class="office-title">${escapeHtml(o.city)}</h3>
+                    <p class="office-address">
+                        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        ${escapeHtml(o.address || (o.city + '، ' + o.country))}
+                    </p>
+                    <div class="office-details">
+                        ${details.join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        // ============================================
+        // 4) الباقات
         // ============================================
         async function loadPackages() {
             const container = document.getElementById('packagesContainer');
             if (!container) return;
-
             try {
                 const res = await fetch(
                     `${SUPABASE_URL}/rest/v1/packages?select=*&is_active=eq.true&order=sort_order.asc,created_at.desc`,
                     { headers: SUPABASE_HEADERS }
                 );
-
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
                 const packages = await res.json();
 
                 if (!packages || packages.length === 0) {
@@ -2410,10 +1604,8 @@
                     observeReveals();
                     return;
                 }
-
                 container.innerHTML = `<div class="packages-grid">${packages.map(renderPackageCard).join('')}</div>`;
                 observeReveals();
-
             } catch (err) {
                 console.error('Packages load error:', err);
                 container.innerHTML = renderErrorState();
@@ -2480,7 +1672,7 @@
                         ${featuresHtml}
                         <div class="package-footer">
                             ${priceHtml}
-                            <a href="https://wa.me/218920010505?text=${waMsg}" target="_blank" rel="noopener" class="package-cta">
+                            <a href="https://wa.me/${state.whatsapp}?text=${waMsg}" target="_blank" rel="noopener" class="package-cta">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.53 3.66 1.44 5.18L2 22l4.99-1.31A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
                                 احجز
                             </a>
@@ -2513,7 +1705,7 @@
                     </div>
                     <h3>لا توجد باقات حالياً</h3>
                     <p>سيتم إضافة أحدث العروض والباقات قريباً. تابعنا أو تواصل معنا مباشرة للاستفسار.</p>
-                    <a href="https://wa.me/218920010505" target="_blank" rel="noopener" class="btn btn-gold" style="display:inline-flex;">
+                    <a href="https://wa.me/${state.whatsapp}" target="_blank" rel="noopener" class="btn btn-gold" style="display:inline-flex;">
                         استفسر عبر واتساب
                     </a>
                 </div>
@@ -2532,30 +1724,49 @@
                     </div>
                     <h3>تعذّر تحميل الباقات</h3>
                     <p>حدث خطأ في الاتصال. يرجى تحديث الصفحة أو التواصل معنا مباشرة.</p>
-                    <a href="https://wa.me/218920010505" target="_blank" rel="noopener" class="btn btn-gold" style="display:inline-flex;">
+                    <a href="https://wa.me/${state.whatsapp}" target="_blank" rel="noopener" class="btn btn-gold" style="display:inline-flex;">
                         تواصل معنا
                     </a>
                 </div>
             `;
         }
 
-        function escapeHtml(str) {
-            if (str == null) return '';
-            return String(str)
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#39;');
-        }
+        // Booking form → WhatsApp
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('fullName').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const travelers = document.getElementById('travelers').value;
+            const serviceType = document.getElementById('serviceType').value;
+            const destination = document.getElementById('destination').value.trim();
+            const departDate = document.getElementById('departDate').value;
+            const notes = document.getElementById('notes').value.trim();
 
-        function formatPrice(val) {
-            const n = Number(val);
-            if (isNaN(n)) return val;
-            return n.toLocaleString('en-US', { maximumFractionDigits: 2 });
-        }
+            let msg = `🌟 *طلب حجز جديد — UNI PLUS* 🌟\n\n`;
+            msg += `👤 *الاسم:* ${name}\n`;
+            msg += `📱 *رقم الهاتف:* ${phone}\n`;
+            msg += `🛎️ *نوع الخدمة:* ${serviceType}\n`;
+            msg += `👥 *عدد المسافرين:* ${travelers}\n`;
+            if (destination) msg += `📍 *الوجهة:* ${destination}\n`;
+            if (departDate) msg += `📅 *تاريخ المغادرة:* ${departDate}\n`;
+            if (notes) msg += `📝 *ملاحظات:* ${notes}\n`;
+            msg += `\nيرجى التواصل لتأكيد الحجز وتقديم العرض.`;
 
-        loadPackages();
+            window.open(`https://wa.me/${state.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
+        });
+
+        // ============================================
+        // Init
+        // ============================================
+        (async () => {
+            await loadSettings();
+            // بعد تحميل الإعدادات، حمّل الباقات والفروع ووسائل التواصل (لأنها تستخدم رقم الواتساب)
+            await Promise.all([
+                loadPackages(),
+                loadOffices(),
+                loadSocialLinks()
+            ]);
+        })();
     </script>
 </body>
 </html>
